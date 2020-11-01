@@ -31,58 +31,6 @@
 #           3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
 #                                      the current game version.
 
-GER_Volk_01 = 
-{
-	name = "Volkssturm Battalions"
-
-	for_countries = { GER }
-
-	can_use = { always = yes }
-
-	division_types = { "infantry" }
-
-	# Number reservation system will tie to another group.
-	#link_numbering_with = { GER_Gar_01 }
-
-	fallback_name = "Volkssturm Battalion"
-
-	# Names with numbers (only one number per entry). 
-	# It's okay to have gaps in numbering.
-	ordered =
-	{
-		1 = { "1/335. Volkssturm Battalion" }
-		2 = { "2/335. Volkssturm Battalion" }
-		3 = { "3/355. Volkssturm Battalion" }
-		4 = { "4/355. Volkssturm Battalion" }
-		5 = { "5/355. Volkssturm Battalion" }
-		6 = { "6/355. Volkssturm Battalion" }
-		7 = { "7/355. Volkssturm Battalion" }
-		8 = { "8/355. Volkssturm Battalion" }
-		9 = { "9/355. Volkssturm Battalion" }
-		10 = { "10/355. Volkssturm Battalion" }
-		11 = { "11/355. Volkssturm Battalion" }
-		12 = { "12/355. Volkssturm Battalion" }
-		13 = { "13/355. Volkssturm Battalion" }
-		14 = { "14/355. Volkssturm Battalion" }
-		15 = { "15/355. Volkssturm Battalion" }
-		16 = { "16/355. Volkssturm Battalion" }
-		17 = { "17/355. Volkssturm Battalion" }
-		18 = { "18/355. Volkssturm Battalion" }
-		19 = { "19/355. Volkssturm Battalion" }
-		20 = { "20/355. Volkssturm Battalion" }
-		21 = { "21/355. Volkssturm Battalion" }
-		22 = { "22/355. Volkssturm Battalion" }
-		23 = { "23/355. Volkssturm Battalion" }
-		24 = { "24/355. Volkssturm Battalion" }
-		25 = { "25/355. Volkssturm Battalion" }
-		26 = { "26/355. Volkssturm Battalion" }
-		27 = { "27/355. Volkssturm Battalion" }
-		28 = { "28/355. Volkssturm Battalion" }
-		29 = { "29/355. Volkssturm Battalion" }
-
-	}
-}
-
 GER_Inf_01 = 
 {
 	name = "Infantry Divisions"
@@ -557,7 +505,6 @@ GER_MOT_01 =
 			has_government = neutrality 
 			has_government = democratic 
 		}
-		has_completed_focus = GER_oppose_hitler
 	}
 
 	division_types = { "motorized"  }
@@ -1061,7 +1008,6 @@ GER_MONINF_01 =
 			has_government = neutrality 
 			has_government = democratic 
 		}
-		has_completed_focus = GER_oppose_hitler
 	}
 
 	division_types = { "infantry" "mechanized" "mountaineers" "paratrooper" "marine" }
@@ -1298,7 +1244,6 @@ GER_MONMOB_01 =
 			has_government = neutrality 
 			has_government = democratic 
 		}
-		has_completed_focus = GER_oppose_hitler
 	}
 
 	division_types = {  "cavalry" "light_armor" "medium_armor" "heavy_armor" "modern_armor"  }

@@ -1,6 +1,6 @@
-﻿capital = 7
+﻿capital = 24
 
-oob = "HOL_1945"
+oob = "HOL_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
 		set_naval_oob = "HOL_1936_naval_mtg"
@@ -46,6 +46,7 @@ if = {
 		transport = 1
 	}
 }
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
@@ -68,48 +69,52 @@ if = {
 
 set_variable = { var = gateway_to_europe_influence_pp_total value = 0 }
 
-add_ideas = {
-	HOL_wilhelmina
+
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	
 }
 
 
 1939.1.1 = {
-	add_ideas = {
-		limited_conscription
-	}
+	
 
 	add_political_power = 1198
 	
 	#generic focuses
-	remove_ideas = HOL_weak_government
+	#remove_ideas = HOL_weak_government
 
-	complete_national_focus = HOL_obtain_foreign_colonial_investments	
-	complete_national_focus = HOL_the_crown_jewel_colony				
-	complete_national_focus = HOL_the_western_possessions				
-	complete_national_focus = HOL_abandon_the_gold_standard			
-	complete_national_focus = HOL_continue_the_public_works			
-	complete_national_focus = HOL_finish_the_noordoostpolder			
-	complete_national_focus = HOL_the_maastunnel						
-	complete_national_focus = HOL_expand_the_artillerieinrichtingen	
-	complete_national_focus = HOL_philips_focus							
-	complete_national_focus = HOL_expand_RD_facilities				
-	complete_national_focus = HOL_overturn_military_budget_cuts		
-	complete_national_focus = HOL_prepare_naval_expansion				
-	complete_national_focus = HOL_cornerstone_of_colonial_defense		
-	complete_national_focus = HOL_modernize_the_cruiser_fleet			
-	complete_national_focus = HOL_expand_curacao_oil_refineries		
-	complete_national_focus = HOL_prepare_the_inundation_lines		
-	complete_national_focus = HOL_germany_is_the_greater_threat		
-	complete_national_focus = HOL_antilles_defenses					
-	complete_national_focus = HOL_form_new_government	
+	#complete_national_focus = HOL_obtain_foreign_colonial_investments	
+	#complete_national_focus = HOL_the_crown_jewel_colony				
+	#complete_national_focus = HOL_the_western_possessions				
+	#complete_national_focus = HOL_abandon_the_gold_standard			
+	#complete_national_focus = HOL_continue_the_public_works			
+	#complete_national_focus = HOL_finish_the_noordoostpolder			
+	#complete_national_focus = HOL_the_maastunnel						
+	#complete_national_focus = HOL_expand_the_artillerieinrichtingen	
+	#complete_national_focus = HOL_philips_focus							
+	#complete_national_focus = HOL_expand_RD_facilities				
+	#complete_national_focus = HOL_overturn_military_budget_cuts		
+	#complete_national_focus = HOL_prepare_naval_expansion				
+	#complete_national_focus = HOL_cornerstone_of_colonial_defense		
+	#complete_national_focus = HOL_modernize_the_cruiser_fleet			
+	#complete_national_focus = HOL_expand_curacao_oil_refineries		
+	#complete_national_focus = HOL_prepare_the_inundation_lines		
+	#complete_national_focus = HOL_germany_is_the_greater_threat		
+	#complete_national_focus = HOL_antilles_defenses					
+	#complete_national_focus = HOL_form_new_government	
 	
-	if = {
-		limit = { has_dlc = "Man the Guns" }
-			set_naval_oob = "HOL_1939_naval_mtg"
-		else = {
-			set_naval_oob = "HOL_1939_naval_legacy"
-		}
-	}
+	# oob = "HOL_1939"
+	# if = {
+		# limit = { has_dlc = "Man the Guns" }
+			# set_naval_oob = "HOL_1939_naval_mtg"
+		# else = {
+			# set_naval_oob = "HOL_1939_naval_legacy"
+		# }
+	# }
 
 	set_technology = {
 		tech_engineers = 1
@@ -341,7 +346,7 @@ if = {
 	create_equipment_variant = {			# represents K II-X, O8 subs
 		name = "K-III Class"
 		type = ship_hull_submarine_1
-		name_group = HOL_SS_KCLASS
+		#name_group = HOL_SS_KCLASS
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -353,7 +358,7 @@ if = {
 	create_equipment_variant = {
 		name = "O9 Class"					# represents O9-15, K XI-XIII subs
 		type = ship_hull_submarine_1
-		name_group = HOL_SS_OCLASS
+		#name_group = HOL_SS_OCLASS
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -365,7 +370,7 @@ if = {
 	create_equipment_variant = {
 		name = "K-XIV Class"				# represents K XIV-XVIII, O16 subs
 		type = ship_hull_submarine_2
-		name_group = HOL_SS_KCLASS
+		#name_group = HOL_SS_KCLASS
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_2
@@ -377,7 +382,7 @@ if = {
 	create_equipment_variant = {
 		name = "Van Ghent Class"			
 		type = ship_hull_light_1
-		name_group = HOL_DD_HISTORICAL
+		#name_group = HOL_DD_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -394,7 +399,7 @@ if = {
 	create_equipment_variant = {
 		name = "Van Galen Class"				
 		type = ship_hull_light_1
-		name_group = HOL_DD_HISTORICAL
+		#name_group = HOL_DD_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -411,7 +416,7 @@ if = {
 	create_equipment_variant = {
 		name = "Java Class"
 		type = ship_hull_cruiser_1
-		name_group = HOL_CL_HISTORICAL
+		#name_group = HOL_CL_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -428,7 +433,7 @@ if = {
 	create_equipment_variant = {
 		name = "De Ruyter Class"
 		type = ship_hull_cruiser_1
-		name_group = HOL_CL_HISTORICAL
+		#name_group = HOL_CL_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -445,7 +450,7 @@ if = {
 	create_equipment_variant = {
 		name = "Hertog Hendrik Class"			
 		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = HOL_CA_HISTORICAL
+		#name_group = HOL_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -463,7 +468,7 @@ if = {
 	create_equipment_variant = {
 		name = "Soerabaja Class"				# represents Soerabaja (De Zeven Provinciën) and Jacob van Heemskerck 
 		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = HOL_CA_HISTORICAL
+		#name_group = HOL_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_1
@@ -493,7 +498,7 @@ if = {
 		create_equipment_variant = {
 			name = "O19 Class"								# represents O19-24 subs
 			type = ship_hull_submarine_3
-			name_group = HOL_SS_OCLASS
+			#name_group = HOL_SS_OCLASS
 			parent_version = 0
 			modules = {
 				fixed_ship_torpedo_slot = ship_torpedo_sub_2
@@ -506,7 +511,7 @@ if = {
 		create_equipment_variant = {
 			name = "Gerard Callenburgh Class"					
 			type = ship_hull_light_2
-			name_group = HOL_DD_HISTORICAL
+			#name_group = HOL_DD_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_2
@@ -538,7 +543,7 @@ if = {
 		create_equipment_variant = {
 			name = "Tromp Class"
 			type = ship_hull_cruiser_1
-			name_group = HOL_CL_HISTORICAL
+			#name_group = HOL_CL_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_medium_battery_2

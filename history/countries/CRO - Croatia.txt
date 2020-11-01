@@ -1,8 +1,8 @@
-﻿capital = 109
+﻿capital = 158
 
 set_research_slots = 2
 
-oob = "CRO_1945"
+#oob = "CRO_1936"
 
 set_technology = {
 	infantry_weapons = 1
@@ -38,25 +38,22 @@ if = {
 }
 
 set_convoys = 5
-	add_ideas = { 
-		war_economy
-		extensive_conscription
-	}
+
 
 1939.1.1 = {
 
 	add_political_power = 1198
 	
 	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = naval_effort
-	complete_national_focus = flexible_navy
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
+	#complete_national_focus = army_effort
+	#complete_national_focus = equipment_effort
+	#complete_national_focus = motorization_effort
+	#complete_national_focus = aviation_effort
+	#complete_national_focus = naval_effort
+	#complete_national_focus = flexible_navy
+	#complete_national_focus = industrial_effort
+	#complete_national_focus = construction_effort
+	#complete_national_focus = production_effort
 	
 	set_technology = {
 	
@@ -100,7 +97,7 @@ set_popularities = {
 create_country_leader = {
 	name = "Ante Pavelic"
 	desc = "ANTE_PAVELIC_DESC"
-	picture = "Ante Pavelic.dds"
+	picture = "Portrait_Croatia_Ante_Pavelic.dds"
 	expire = "1965.1.1"
 	ideology = fascism_ideology
 	traits = {

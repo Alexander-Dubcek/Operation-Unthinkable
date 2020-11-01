@@ -1,4 +1,4 @@
-﻿capital = 64
+﻿capital = 89
 
 # Starting tech
 set_technology = {
@@ -152,8 +152,7 @@ set_popularities = {
 }
 
 
-add_ideas = {
-}
+
 
 create_country_leader = {
 	name = "Klaus Klauser"

@@ -1,4 +1,4 @@
-﻿capital = 47
+﻿capital = 131
 
 oob = "GRE_1936"
 if = {
@@ -63,22 +63,22 @@ set_convoys = 10
 	add_political_power = 1198
 	
 	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = naval_effort
-	complete_national_focus = large_navy
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
+	#complete_national_focus = army_effort
+	#complete_national_focus = equipment_effort
+	#complete_national_focus = motorization_effort
+	#complete_national_focus = aviation_effort
+	#complete_national_focus = naval_effort
+	#complete_national_focus = large_navy
+	#complete_national_focus = industrial_effort
+	#complete_national_focus = construction_effort
+	#complete_national_focus = production_effort
 	
-	oob = "GRE_1939"
+	#oob = "GRE_1939"
 	if = {
 		limit = { has_dlc = "Man the Guns" }
-			set_naval_oob = "GRE_1939_naval_mtg"
+			#set_naval_#oob = "GRE_1939_naval_mtg"
 		else = {
-			set_naval_oob = "GRE_1939_naval_legacy"
+			#set_naval_#oob = "GRE_1939_naval_legacy"
 		}
 	}
 	
@@ -140,16 +140,16 @@ set_convoys = 10
 }
 
 set_politics = {
-	ruling_party = monarchism
+	ruling_party = neutrality
 	last_election = "1935.6.9"
 	election_frequency = 12
-	elections_allowed = no # none after offset 1
+	elections_allowed = yes # none after offset 1
 }
 set_popularities = {
 	democratic = 10
 	fascism = 23
 	communism = 2
-	monarchism = 65
+	neutrality = 65
 }
 
 set_stability = 0.75
@@ -160,17 +160,6 @@ create_country_leader = {
 	picture = "Portrait_Greece_Ioannis_Metaxas.dds"
 	expire = "1965.1.1"
 	ideology = despotism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "George II"
-	desc = "POLITICS_IOANNIS_METAXAS_DESC"
-	picture = "George II.dds"
-	expire = "1965.1.1"
-	ideology = monarchist
 	traits = {
 		#
 	}
@@ -244,7 +233,7 @@ if = {
 	create_equipment_variant = {
 		name = "Katsonis Class"				
 		type = ship_hull_submarine_1
-		name_group = GRE_SS_HISTORICAL
+		#name_group = GRE_SS_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -256,7 +245,7 @@ if = {
 	create_equipment_variant = {
 		name = "Glafkos Class"				
 		type = ship_hull_submarine_2
-		name_group = GRE_SS_HISTORICAL
+		#name_group = GRE_SS_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -268,7 +257,7 @@ if = {
 	create_equipment_variant = {
 		name = "Aetos Class"					
 		type = ship_hull_light_1
-		name_group = GRE_DD_HISTORICAL
+		#name_group = GRE_DD_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -285,7 +274,7 @@ if = {
 	create_equipment_variant = {
 		name = "Hydra Class"	
 		type = ship_hull_light_1
-		name_group = GRE_DD_HISTORICAL
+		#name_group = GRE_DD_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -302,7 +291,7 @@ if = {
 	create_equipment_variant = {
 		name = "Averof Class"				
 		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = GRE_CA_HISTORICAL
+		#name_group = GRE_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_1
@@ -321,7 +310,7 @@ if = {
 	create_equipment_variant = {
 		name = "Elli Class"				
 		type = ship_hull_cruiser_1
-		name_group = GRE_CL_HISTORICAL
+		#name_group = GRE_CL_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -340,7 +329,7 @@ if = {
 	create_equipment_variant = {
 		name = "Kilkis Class"	
 		type = ship_hull_pre_dreadnought
-		name_group = GRE_BB_HISTORICAL
+		#name_group = GRE_BB_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_1
@@ -370,7 +359,7 @@ if = {
 	create_equipment_variant = {
 			name = "Vasilefs Georgios I Class"	
 			type = ship_hull_light_2
-			name_group = GRE_DD_HISTORICAL
+			#name_group = GRE_DD_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_2

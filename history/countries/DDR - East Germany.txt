@@ -1,4 +1,4 @@
-﻿capital = 64
+﻿capital = 440
 
 # Starting tech
 set_technology = {
@@ -147,8 +147,7 @@ set_popularities = {
 	communism = 60
 }
 
-add_ideas = {
-}
+
 
 create_country_leader = {
 	name = "Jake Richter"
@@ -172,9 +171,9 @@ create_country_leader = {
 #}
 #
 create_country_leader = {
-	name = "Georgy Zhukov"
+	name = "Wilhelm Pieck"
 	desc = "POLITICS_WILHELM_PIECK_DESC"	 
-	picture = "Georgy Zhukov.dds"
+	picture = gfx/leaders/GER/Portrait_Germany_Wilhelm_Pieck.dds
 	expire = "1965.1.1"
 	ideology = stalinism
 	traits = {

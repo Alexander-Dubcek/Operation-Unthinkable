@@ -1,4 +1,4 @@
-﻿capital = 126
+﻿capital = 6
 
 set_oob = "ENG_1936"
 if = {
@@ -11,7 +11,7 @@ if = {
 	}
 }
 
-load_oob = "ENG_Motorized"
+# load_oob = "ENG_Motorized"
 
 set_research_slots = 4
 
@@ -96,21 +96,43 @@ if = {
 		improved_secondary_battery = 1
 		basic_fire_control_system = 1
 	}
-	add_ideas = MTG_naval_treaty_adherent
-	set_global_flag = MTG_second_london_conference
-	set_global_flag = { flag = MTG_naval_treaty_signatories value = 5 }
 }
 
-set_variable = { var = eng_gateway_to_europe_influence value = 0 }
-
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+	
 add_ideas = {
 	stiff_upper_lip
 	ENG_the_war_to_end_all_wars
 	george_v
+	ENG_edo_colonial_help
 }
-	
 
 set_convoys = 800
+
+if = {
+	limit = { has_dlc = "Together for Victory" }
+
+	add_to_tech_sharing_group = commonwealth_research
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.11.14"
+	election_frequency = 48
+	elections_allowed = yes ##suspended through duration of war, which is handled via event
+}
+set_popularities = {
+	democratic = 97
+	fascism = 2
+	communism = 1
+}
 
 # DIPLOMACY
 if = {
@@ -121,239 +143,90 @@ if = {
 		}
 	}
 	set_autonomy = {
-		target = MAL
-		autonomous_state = autonomy_integrated_puppet
-	}
-	set_autonomy = {
-		target = RAJ
-		autonomous_state = autonomy_colony
-		freedom_level = 0.35
-	}
-	set_autonomy = {
-		target = CAN
+		target = EGY
 		autonomous_state = autonomy_dominion
-		freedom_level = 0.4
+		freedom_level = 0.65
 	}
-	set_autonomy = {
-		target = SAF
-		autonomous_state = autonomy_dominion
-		freedom_level = 0.4
-	}
-	set_autonomy = {
-		target = AST
-		autonomous_state = autonomy_dominion
-		freedom_level = 0.2
-	}
-	set_autonomy = {
-		target = NZL
-		autonomous_state = autonomy_dominion
-		freedom_level = 0.2
-	}
-	else = {
-		puppet = MAL
-		puppet = RAJ
-	}
-}
-
-
-if = {
-	limit = { has_dlc = "Together for Victory" }
-
-	add_to_tech_sharing_group = commonwealth_research
-}
-
-1939.1.1 = {
-
-	add_political_power = 1198
-	
-	#adding ministers
-	add_ideas = {
-		ENG_ernest_bevin
-		bernard_montgomery
-		rsaf_enfield
-		archibald_wavell
-		charles_portal
-		english_electric		
-
-		#laws
-		partial_economic_mobilisation
-		limited_conscription
-		manhattan_project
-
-		ENG_george_vi
-	}
-
-	remove_ideas = george_v #Dead
-
-	complete_national_focus = limited_rearmament_focus
-	complete_national_focus = air_defense_focus
-	complete_national_focus = radar_focus
-	complete_national_focus = shadow_scheme_focus
-	complete_national_focus = uk_empire_focus
-	complete_national_focus = uk_service_focus
-	complete_national_focus = uk_colonial_focus
-	complete_national_focus = uk_mediterranean_focus
-	complete_national_focus = uk_asia_focus
-	complete_national_focus = uk_commonwealth_focus
-
-	give_guarantee = POL
-	
-	set_oob = "ENG_1945"
-	if = {
-		limit = {
-			has_dlc = "Man the Guns"
-		}
-		set_naval_oob = "ENG_1939_Naval"
-		else = {
-			set_naval_oob = "ENG_1939_Naval_Legacy"
-		}
-	}
-
-	set_technology = {
-		fighter1 = 1
-		fighter2 = 1
-		heavy_fighter1 = 1
-		heavy_fighter2 = 1
-		CAS2 = 1
-		naval_bomber2 = 1
-		tactical_bomber1 = 1
-		tactical_bomber2 = 1
-		strategic_bomber1 = 1
-		cv_CAS1 = 1
-		cv_fighter1 = 1
-		improved_light_tank = 1
-		basic_medium_tank = 1
-		basic_heavy_tank = 1
-		interwar_artillery = 1
-		interwar_antitank = 1
-		infantry_weapons2 = 1
-		support_weapons = 1
-		support_weapons2 = 1
-		
-
-		#doctrines
-		#Air
-		air_superiority = 1
-		home_defence = 1
-		naval_strike_tactics = 1
-
-			grand_battle_plan = 1
-
-		prepared_defense = 1
-		battlefleet_concentration = 1
-		subsidiary_carrier_role = 1
-		convoy_sailing = 1
-		convoy_escorts = 1
-		submarine_operations = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		radio_detection = 1
-		decimetric_radar = 1
-		mechanical_computing = 1
-		computing_machine = 1
-		basic_encryption = 1
-		basic_decryption = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		synth_oil_experiments = 1
-		oil_processing = 1
-		fuel_refining2 = 1
-		construction1 = 1
-		construction2 = 1
-		construction3 = 1
-		dispersed_industry = 1
-		dispersed_industry2 = 1
-		dispersed_industry3 = 1
-	}
-	if = {
-		limit = {
-			not = { has_dlc = "Man the Guns"}
-		}
-		set_technology = {
-			basic_submarine = 1
-			improved_submarine = 1
-			improved_destroyer = 1
-			basic_light_cruiser = 1
-			improved_light_cruiser = 1
-			basic_battleship = 1
-			basic_carrier = 1
-			improved_carrier = 1
-		}
-		set_naval_oob = "ENG_1939_Naval_Legacy"
-	}
-	if = {
-		limit = {
-			has_dlc = "Man the Guns"
-		}
-		set_technology = {
-			basic_ship_hull_submarine = 1
-			improved_ship_hull_submarine = 1
-			improved_ship_hull_light = 1
-			improved_ship_hull_cruiser = 1
-			basic_ship_hull_heavy = 1
-			
-			improved_ship_hull_carrier = 1
-			dp_secondary_battery = 1
-			improved_sonar = 1
-		}
-		set_naval_oob = "ENG_1939_Naval"
-		remove_ideas = MTG_naval_treaty_adherent
-		add_ideas = MTG_naval_treaty_adherent_reduced
-		clr_global_flag = MTG_second_london_conference
-		modify_global_flag = { flag = MTG_naval_treaty_signatories value = -2 }
-	}
-
-	set_convoys = 200
-}
-
-set_politics = {
-	ruling_party = democratic
-	last_election = "1935.11.14"
-	election_frequency = 48
-	elections_allowed = yes ##suspended through duration of war, which is handled via event
-}
-set_popularities = {	democratic = 53	socialism = 42
-	social_democrat = 5
 }
 
 
 create_faction = Allies
 add_to_faction = ENG
-add_to_faction = FRA
-add_to_faction = CAN
-add_to_faction = AST
-add_to_faction = NZL
-add_to_faction = SAF
-add_to_faction = USA
-add_to_faction = FIT
-add_to_faction = HOL
-add_to_faction = BEL
-add_to_faction = LUX
-add_to_faction = ITL
-
-give_military_access = RAJ
-add_to_faction = RAJ		# Must be after puppet
-add_to_faction = MAL
-
+add_to_faction = EGY
+diplomatic_relation = { country = IRQ relation = non_aggression_pact }
+diplomatic_relation = { country = PER relation = non_aggression_pact }
+diplomatic_relation = { country = SAU relation = non_aggression_pact }
+##add_to_faction = FRA
 #give_guarantee = CZE
 
 # Order matters - here Chamberlain becomes starting leader
 
 create_country_leader = {
 	name = "Winston Churchill"
-	desc = "POLITICS_OSWALD_MOSLEY_DESC"
-	picture = "Winston_Churchill.dds"
+	desc = "POLITICS_WINSTON_CHURCHILL_DESC"
+	picture = "Portrait_Britain_Winston_Churchill.dds"
 	expire = "1965.1.1"
 	ideology = conservatism
 	traits = {
-	
+		#traits here need to also be added to events britain.9 and britain.10. Don't ask why.
 	}
 }
+
+create_country_leader = {
+	name = "Stanley Baldwin"
+	desc = "POLITICS_STANLEY_BALDWIN_DESC"
+	picture = "gfx//leaders//ENG//Portrait_Britain_Stanley_Baldwin.dds"
+	expire = "1937.7.28"
+	ideology = liberalism
+	traits = {
+		conservative_grandee
+	}
+}
+
+#create_country_leader = {
+#	name = "Neville Chamberlain"
+#	desc = "POLITICS_NEVILLE_CHAMBERLAIN_DESC"
+#	picture = "Portrait_Britain_Neville_Chamberlain.dds"
+#	expire = "1965.1.1"
+#	ideology = liberalism
+#	traits = {
+#		
+#	}
+#}
+
+create_country_leader = {
+	name = "Oswald Mosley"
+	desc = "POLITICS_OSWALD_MOSLEY_DESC"
+	picture = "Portrait_Britain_Oswald_Mosley.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		champion_of_peace_1
+		economic_reformer
+	}
+}
+
+create_country_leader = {
+	name = "Harry Pollitt"
+	desc = "POLITICS_HARRY_POLLITT_DESC"
+	picture = "portrait_eng_harry_pollitt.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		staunch_stalinist
+	}
+}
+
+#create_country_leader = {
+#	name = "Rajani Palme Dutt"
+#	desc = "POLITICS_PALME_DUTT_DESC"
+#	picture = "Portrait_Britain_Palme_Dutt.dds"
+#	expire = "1965.1.1"
+#	ideology = leninism
+#	traits = {
+#		
+#	}
+#}
 
 create_field_marshal = {
 	name = "Alan Brooke" # Aristocrat
@@ -736,117 +609,52 @@ create_navy_leader = {
 	coordination_skill = 2
 }
 
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	create_operative_leader = {
+		name = "Nancy Wake"
+		GFX = GFX_portrait_nancy_wake
+		traits = { operative_escape_artist }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { ENG }
+	}
+
+	create_operative_leader = {
+		name = "Diana Rowden"
+		GFX = GFX_portrait_diana_rowden
+		traits = { }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { ENG }
+	}
+
+	create_operative_leader = {
+		name = "Juan Pujol"
+		GFX = GFX_portrait_juan_pujol
+		traits = { operative_double_agent }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { ENG GER }
+	}
+
+	create_operative_leader = {
+		name = "Dusko Popov"
+		GFX = GFX_portrait_dusko_popov
+		traits = { operative_double_agent }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { ENG GER YUG }
+	}
+}
+
+
 ### Ship Variants ###
 
-#create_equipment_variant = {
-#	name = "O/P/R Class"
-#	type = submarine_1
-#	upgrades = {
-#		ship_reliability_upgrade = 1
-#		sub_engine_upgrade = 1
-#		sub_stealth_upgrade = 1
-#		sub_torpedo_upgrade = 1
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "S Class"
-#	type = submarine_1
-#	upgrades = {
-#		ship_reliability_upgrade = 2
-#		sub_engine_upgrade = 2
-#		sub_stealth_upgrade =2
-#		sub_torpedo_upgrade = 2
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "A/B/C/D Class"
-#	type = destroyer_1
-#	upgrades = {
-#		ship_torpedo_upgrade = 1
-#		ship_engine_upgrade = 1
-#		ship_ASW_upgrade = 1
-#		ship_anti_air_upgrade = 1
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "Tribal Class"
-#	type = destroyer_1
-#	upgrades = {
-#		ship_torpedo_upgrade = 2
-#		ship_engine_upgrade = 2
-#		ship_ASW_upgrade = 2
-#		ship_anti_air_upgrade = 2
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "Emerald Class"
-#	type = light_cruiser_1
-#	upgrades = {
-#		ship_reliability_upgrade = 1
-#		ship_engine_upgrade = 1
-#		ship_gun_upgrade = 1
-#		ship_anti_air_upgrade = 1
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "Amphion Class"
-#	type = light_cruiser_1
-#	upgrades = {
-#		ship_reliability_upgrade = 2
-#		ship_engine_upgrade = 2
-#		ship_gun_upgrade = 2
-#		ship_anti_air_upgrade = 2
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "Edinburgh Class"
-#	type = light_cruiser_2
-#	upgrades = {
-#		ship_reliability_upgrade = 3
-#		ship_engine_upgrade = 3
-#		ship_gun_upgrade = 3
-#		ship_anti_air_upgrade = 3
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "County Class"
-#	type = heavy_cruiser_1
-#	upgrades = {
-#		ship_reliability_upgrade = 2
-#		ship_engine_upgrade = 2
-#		ship_armor_upgrade = 2
-#		ship_gun_upgrade = 2
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "Admiral Class"
-#	type = battle_cruiser_1
-#	upgrades = {
-#		ship_reliability_upgrade = 1
-#		ship_engine_upgrade = 1
-#		ship_armor_upgrade = 1
-#		ship_gun_upgrade = 1
-#	}
-#}
-#
-#create_equipment_variant = {
-#	name = "Nelson Class"
-#	type = battleship_1
-#	upgrades = {
-#		ship_reliability_upgrade = 1
-#		ship_engine_upgrade = 1
-#		ship_armor_upgrade = 1
-#		ship_gun_upgrade = 1
-#	}
-#}
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	### Variants ###
@@ -964,7 +772,7 @@ if = {
 	create_equipment_variant = {
 		name = "O/P/R Class"
 		type = ship_hull_submarine_1
-		name_group = ENG_SS_HISTORICAL
+		#name_group = ENG_SS_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -975,7 +783,7 @@ if = {
 	create_equipment_variant = {
 		name = "S Class"
 		type = ship_hull_submarine_1
-		name_group = ENG_SS_HISTORICAL
+		#name_group = ENG_SS_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -987,7 +795,7 @@ if = {
 	create_equipment_variant = {
 		name = "A/B/C/D Class"
 		type = ship_hull_light_1
-		name_group = ENG_DD_HISTORICAL
+		#name_group = ENG_DD_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_2
@@ -1004,7 +812,7 @@ if = {
 	create_equipment_variant = {
 		name = "E/F/G/H Class"
 		type = ship_hull_light_2
-		name_group = ENG_DD_HISTORICAL
+		#name_group = ENG_DD_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_2
@@ -1020,7 +828,7 @@ if = {
 	create_equipment_variant = {
 		name = "V/W Class"
 		type = ship_hull_light_1
-		name_group = ENG_DD_HISTORICAL
+		#name_group = ENG_DD_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -1037,7 +845,7 @@ if = {
 	create_equipment_variant = {
 		name = "S Class"
 		type = ship_hull_light_1
-		name_group = ENG_DD_HISTORICAL
+		#name_group = ENG_DD_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -1055,7 +863,7 @@ if = {
 	create_equipment_variant = {
 		name = "C-Class"
 		type = ship_hull_cruiser_1
-		name_group = ENG_CL_HISTORICAL
+		#name_group = ENG_CL_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -1073,7 +881,7 @@ if = {
 	create_equipment_variant = {
 		name = "Danae Class"
 		type = ship_hull_cruiser_1
-		name_group = ENG_CL_HISTORICAL
+		#name_group = ENG_CL_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -1091,7 +899,7 @@ if = {
 	create_equipment_variant = {
 		name = "Emerald Class"
 		type = ship_hull_cruiser_1
-		name_group = ENG_CL_HISTORICAL
+		#name_group = ENG_CL_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -1109,7 +917,7 @@ if = {
 	create_equipment_variant = {
 		name = "Leander Class"
 		type = ship_hull_cruiser_2
-		name_group = ENG_CL_HISTORICAL
+		#name_group = ENG_CL_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_2
@@ -1127,7 +935,7 @@ if = {
 	create_equipment_variant = {
 		name = "Adventure Class"						# cruiser minelayer
 		type = ship_hull_cruiser_1
-		name_group = ENG_MINELAYERS_HISTORICAL
+		#name_group = ENG_MINELAYERS_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -1144,7 +952,7 @@ if = {
 	create_equipment_variant = {
 			name = "Town Class"
 			type = ship_hull_cruiser_2
-			name_group = ENG_CL_HISTORICAL
+			#name_group = ENG_CL_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_medium_battery_2
@@ -1163,7 +971,7 @@ if = {
 	create_equipment_variant = {
 		name = "County Class"
 		type = ship_hull_cruiser_1
-		name_group = ENG_CA_HISTORICAL
+		#name_group = ENG_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_2
@@ -1181,7 +989,7 @@ if = {
 	create_equipment_variant = {
 		name = "York Class"
 		type = ship_hull_cruiser_1
-		name_group = ENG_CA_HISTORICAL
+		#name_group = ENG_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_2
@@ -1198,7 +1006,7 @@ if = {
 	create_equipment_variant = {
 		name = "Hawkins Class"
 		type = ship_hull_cruiser_1
-		name_group = ENG_CA_HISTORICAL
+		#name_group = ENG_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_1
@@ -1217,7 +1025,7 @@ if = {
 	create_equipment_variant = {
 		name = "Renown Class"
 		type = ship_hull_heavy_1
-		name_group = ENG_BC_HISTORICAL
+		#name_group = ENG_BC_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_1
@@ -1238,7 +1046,7 @@ if = {
 	create_equipment_variant = {
 		name = "Admiral Class"
 		type = ship_hull_heavy_1
-		name_group = ENG_BC_HISTORICAL
+		#name_group = ENG_BC_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_1
@@ -1258,7 +1066,7 @@ if = {
 	create_equipment_variant = {
 		name = "G3 Design"
 		type = ship_hull_heavy_1
-		name_group = ENG_BC_HISTORICAL
+		#name_group = ENG_BC_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_2
@@ -1278,7 +1086,7 @@ if = {
 	create_equipment_variant = {
 		name = "Nelson Class"
 		type = ship_hull_heavy_1
-		name_group = ENG_BB_HISTORICAL
+		#name_group = ENG_BB_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_2
@@ -1297,7 +1105,7 @@ if = {
 	create_equipment_variant = {
 		name = "Queen Elizabeth Class"
 		type = ship_hull_heavy_1
-		name_group = ENG_BB_HISTORICAL
+		#name_group = ENG_BB_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_1
@@ -1317,7 +1125,7 @@ if = {
 	create_equipment_variant = {
 		name = "Revenge Class"
 		type = ship_hull_heavy_1
-		name_group = ENG_BB_HISTORICAL
+		#name_group = ENG_BB_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_1
@@ -1337,7 +1145,7 @@ if = {
 	create_equipment_variant = {
 		name = "Eagle Class"
 		type = ship_hull_carrier_conversion_bb
-		name_group = ENG_CV_HISTORICAL
+		#name_group = ENG_CV_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_deck_slot_1 = ship_deck_space
@@ -1354,7 +1162,7 @@ if = {
 	create_equipment_variant = {
 		name = "Hermes Class"
 		type = ship_hull_carrier_conversion_ca
-		name_group = ENG_CVL_HISTORICAL
+		#name_group = ENG_CVL_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_deck_slot_1 = ship_deck_space
@@ -1369,7 +1177,7 @@ if = {
 	create_equipment_variant = {
 		name = "Courageous Class"
 		type = ship_hull_carrier_conversion_bb
-		name_group = ENG_CV_HISTORICAL
+		#name_group = ENG_CV_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_deck_slot_1 = ship_deck_space
@@ -1385,7 +1193,7 @@ if = {
 	create_equipment_variant = {
 			name = "Ark Royal Class"
 			type = ship_hull_carrier_1
-			name_group = ENG_CV_HISTORICAL
+			#name_group = ENG_CV_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_deck_slot_1 = ship_deck_space
@@ -1433,7 +1241,7 @@ if = {
 		create_equipment_variant = {
 			name = "Illustrious Class"
 			type = ship_hull_carrier_2
-			name_group = ENG_CV_HISTORICAL
+			#name_group = ENG_CV_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_deck_slot_1 = ship_deck_space
@@ -1449,7 +1257,7 @@ if = {
 		create_equipment_variant = {
 			name = "Dido Class"
 			type = ship_hull_cruiser_2
-			name_group = ENG_CLAA_HISTORICAL
+			#name_group = ENG_CLAA_HISTORICAL
 			parent_version = 1
 			modules = {
 				fixed_ship_battery_slot = dp_light_battery
@@ -1467,7 +1275,7 @@ if = {
 		create_equipment_variant = {
 			name = "Crown Colony Class"
 			type = ship_hull_cruiser_3
-			name_group = ENG_CL_HISTORICAL
+			#name_group = ENG_CL_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_medium_battery_2
@@ -1486,7 +1294,7 @@ if = {
 		create_equipment_variant = {
 			name = "Tribal Class"
 			type = ship_hull_light_2
-			name_group = ENG_DD_HISTORICAL
+			#name_group = ENG_DD_HISTORICAL
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_2
 				fixed_ship_anti_air_slot = ship_anti_air_1
@@ -1501,7 +1309,7 @@ if = {
 		create_equipment_variant = {
 			name = "J/K/N Class"
 			type = ship_hull_light_3
-			name_group = ENG_DD_HISTORICAL
+			#name_group = ENG_DD_HISTORICAL
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_2
 				fixed_ship_anti_air_slot = ship_anti_air_1
@@ -1517,7 +1325,7 @@ if = {
 		create_equipment_variant = {
 			name = "King George V Class"
 			type = ship_hull_heavy_2
-			name_group = ENG_BB_HISTORICAL
+			#name_group = ENG_BB_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_heavy_battery_2
@@ -1536,7 +1344,7 @@ if = {
 		create_equipment_variant = {
 			name = "Lion Class" # 1938 variant
 			type = ship_hull_heavy_2
-			name_group = ENG_BB_HISTORICAL
+			#name_group = ENG_BB_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_heavy_battery_3
@@ -1555,7 +1363,7 @@ if = {
 		create_equipment_variant = {
 			name = "T Class"
 			type = ship_hull_submarine_2
-			name_group = ENG_SS_HISTORICAL
+			#name_group = ENG_SS_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_torpedo_slot = ship_torpedo_sub_2
@@ -1566,7 +1374,7 @@ if = {
 		create_equipment_variant = {
 			name = "Grampus Class"
 			type = ship_hull_submarine_2
-			name_group = ENG_SS_HISTORICAL
+			#name_group = ENG_SS_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_torpedo_slot = ship_torpedo_sub_2
@@ -1577,7 +1385,7 @@ if = {
 		create_equipment_variant = {
 			name = "U Class"
 			type = ship_hull_submarine_1
-			name_group = ENG_SS_HISTORICAL
+			#name_group = ENG_SS_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_torpedo_slot = ship_torpedo_sub_2

@@ -1,4 +1,4 @@
-﻿capital = 10
+﻿capital = 279
 
 oob = "POL_1936"
 if = {
@@ -53,56 +53,54 @@ if = {
 		limit = {
 			has_dlc = "Poland: United and Ready"
 		}
-		complete_national_focus = POL_central_region_strategy
-		complete_national_focus = POL_the_four_year_plan
-		complete_national_focus = POL_additional_research_slot1
-		complete_national_focus = POL_prepare_for_the_next_war
-		complete_national_focus = POL_standardisation_of_equipment
-		complete_national_focus = POL_defensive_focus
 
-		unlock_national_focus = POL_expansion_of_new_towns
-		unlock_national_focus = POL_fill_the_railways_gaps
-		unlock_national_focus = POL_start_central_industrial_region		
-		unlock_national_focus = POL_national_defence_fund
-		unlock_national_focus = POL_warsaw_main_railway_station
-		unlock_national_focus = POL_invest_in_the_old_polish_region
-		
+		#complete_national_focus = POL_central_region_strategy
+		#complete_national_focus = POL_expansion_of_new_towns
+		#complete_national_focus = POL_start_central_industrial_region
+		#complete_national_focus = POL_fill_the_railways_gaps
+
+		unlock_national_focus = POL_the_four_year_plan
+		#complete_national_focus = POL_national_defence_fund
+		#complete_national_focus = POL_warsaw_main_railway_station
+		#complete_national_focus = POL_invest_in_the_old_polish_region
+		#complete_national_focus = POL_additional_research_slot1
+
+		unlock_national_focus = POL_prepare_for_the_next_war
+		unlock_national_focus = POL_standardisation_of_equipment
+		unlock_national_focus = POL_modernising_the_cavalry
 		unlock_national_focus = POL_the_defence_of_poland
 		unlock_national_focus = POL_romanian_bridgehead_strategy
-		unlock_national_focus = POL_silesia_fortified_area
-		unlock_national_focus = POL_hel_fortified_area
-		unlock_national_focus = POL_modernising_the_cavalry
+		#complete_national_focus = POL_hel_fortified_area
+		#complete_national_focus = POL_silesia_fortified_area
+
+		#complete_national_focus = POL_air_base_expansion
+		#complete_national_focus = POL_develop_polish_ship_building
+
 		unlock_national_focus = POL_strengthen_the_polish_state
-		
-		unlock_national_focus = POL_air_base_expansion
-		unlock_national_focus = POL_develop_polish_ship_building
+		#complete_national_focus = POL_defensive_focus
 	}
 
 	add_political_power = 1198
 	
 	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = naval_effort
-	complete_national_focus = flexible_navy
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
+	#complete_national_focus = army_effort
+	#complete_national_focus = equipment_effort
+	#complete_national_focus = motorization_effort
+	#complete_national_focus = aviation_effort
+	#complete_national_focus = naval_effort
+	#complete_national_focus = flexible_navy
+	#complete_national_focus = industrial_effort
+	#complete_national_focus = construction_effort
+	#complete_national_focus = production_effort
 
-	add_ideas = {
-		#laws
-		limited_conscription
-		partial_economic_mobilisation
-	}
+	
 
-	oob = "POL_1939"
+	#oob = "POL_1939"
 	if = {
 		limit = { has_dlc = "Man the Guns" }
-			set_naval_oob = "POL_1939_naval_mtg"
+			#set_naval_#oob = "POL_1939_naval_mtg"
 		else = {
-			set_naval_oob = "POL_1939_naval_legacy"
+			#set_naval_#oob = "POL_1939_naval_legacy"
 		}
 	}
 
@@ -185,6 +183,9 @@ set_popularities = {
 	fascism = 15
 	communism = 2
 	neutrality = 65
+}
+add_ideas = {
+	POL_surrender_limit
 }
 
 1939.1.1 = {
@@ -317,6 +318,30 @@ create_corps_commander = {
 	logistics_skill = 3
 }
 
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	create_operative_leader = {
+		name = "Roman Czerniawski"
+		GFX = GFX_portrait_roman_czerniawski
+		traits = { }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { POL }
+	}
+
+	create_operative_leader = {
+		name = "Krystyna Skarbek"
+		GFX = GFX_portrait_krystyna_skarbek
+		traits = { operative_commando operative_seducer }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { POL }
+	}
+}
+
 create_equipment_variant = {
 	name = "PZL P.24"
 	type = fighter_equipment_0
@@ -340,7 +365,7 @@ if = {
 	create_equipment_variant = {
 		name = "Wilk Class"				
 		type = ship_hull_submarine_2
-		name_group = POL_SS_HISTORICAL
+		#name_group = POL_SS_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -352,7 +377,7 @@ if = {
 	create_equipment_variant = {
 		name = "Wicher Class"				
 		type = ship_hull_light_1
-		name_group = POL_DD_HISTORICAL
+		#name_group = POL_DD_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -380,7 +405,7 @@ if = {
 		create_equipment_variant = {
 			name = "Orzel Class"				
 			type = ship_hull_submarine_2
-			name_group = POL_SS_HISTORICAL
+			#name_group = POL_SS_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_torpedo_slot = ship_torpedo_sub_2
@@ -392,7 +417,7 @@ if = {
 		create_equipment_variant = {
 			name = "Grom Class"					
 			type = ship_hull_light_2
-			name_group = POL_DD_HISTORICAL
+			#name_group = POL_DD_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_2

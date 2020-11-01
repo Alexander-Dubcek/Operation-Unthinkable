@@ -1,10 +1,8 @@
-﻿capital = 48
+﻿capital = 147
 
 oob = "BUL_1936"
 
-add_ideas = {
-	limited_conscription
-}
+
 
 set_technology = {
 	infantry_weapons = 1
@@ -21,16 +19,15 @@ set_technology = {
 	add_political_power = 1198
 	
 	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = flexible_navy
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
+	#complete_national_focus = army_effort
+	#complete_national_focus = equipment_effort
+	#complete_national_focus = motorization_effort
+	#complete_national_focus = aviation_effort
+	#complete_national_focus = industrial_effort
+	#complete_national_focus = construction_effort
+	#complete_national_focus = production_effort
 	
-	oob = "BUL_1939"
+	#oob = "BUL_1939"
 	set_technology = {
 		fighter1 = 1
 		early_bomber = 1
@@ -76,7 +73,7 @@ set_technology = {
 set_convoys = 5
 
 set_politics = {
-	ruling_party = communism
+	ruling_party = neutrality
 	last_election = "1931.6.21"
 	election_frequency = 48
 	elections_allowed = no
@@ -84,8 +81,18 @@ set_politics = {
 
 set_popularities = {
 	democratic = 5
-	monarchism = 35
-	communism = 60
+	fascism = 35
+	neutrality = 60
+}
+
+
+1939.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1938.3.27"
+		election_frequency = 48
+		elections_allowed = no
+	}
 }
 
 create_country_leader = {

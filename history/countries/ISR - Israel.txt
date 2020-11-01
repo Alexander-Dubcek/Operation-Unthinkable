@@ -1,4 +1,4 @@
-﻿capital = 554
+﻿capital = 139
 
 # Starting tech
 set_technology = {
@@ -14,15 +14,15 @@ set_convoys = 5
 	add_political_power = 1198
 	
 	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = naval_effort
-	complete_national_focus = large_navy
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
+	#complete_national_focus = army_effort
+	#complete_national_focus = equipment_effort
+	#complete_national_focus = motorization_effort
+	#complete_national_focus = aviation_effort
+	#complete_national_focus = naval_effort
+	#complete_national_focus = large_navy
+	#complete_national_focus = industrial_effort
+	#complete_national_focus = construction_effort
+	#complete_national_focus = production_effort
 	
 	set_technology = {
 		tech_support = 1
@@ -59,23 +59,21 @@ set_convoys = 5
 
 
 set_politics = {
-	ruling_party = socialism
-	last_election = "1945.1.1"
+	ruling_party = democratic
+	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 set_popularities = {
-	socialism = 48
-	neutrality = 30
-	democratic = 19
-	communism = 3
+	democratic = 80
+	communism = 20
 }
 
 create_country_leader = {
 	name = "David Ben-Gurion"
 	desc = ""
-	picture = "David Ben Gurion.dds"
-	ideology = socialist
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+	ideology = liberalism
 	traits = {
 		#
 	}

@@ -1,4 +1,4 @@
-﻿capital = 111
+﻿capital = 292
 
 oob = "FIN_1936"
 if = {
@@ -13,16 +13,21 @@ set_research_slots = 3
 
 add_ideas = {
 	limited_conscription
+	petsamon_nikkeli
+	banned_communism_fcw
 }
 
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	gw_artillery = 1			
+	gw_artillery = 1
+	gwtank = 1
 	interwar_antiair = 1
 	tech_support = 1		
 	tech_recon = 1
 	tech_engineers = 1
+	early_fighter = 1
+	early_bomber = 1
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -166,9 +171,9 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Carl Gustaf Emil Mannerheim"
-	desc = "POLITICS_KYÖSTI_KALLIO_DESC"
-	picture = "Carl Gustaf Emil Mannerheim.dds"
+	name = "Pehr Evind Svinhufvud"
+	desc = ""
+	picture = "gfx/leaders/FIN/Portrait_Pehr_Evind.dds"
 	expire = "1965.1.1"
 	ideology = centrism
 	traits = {

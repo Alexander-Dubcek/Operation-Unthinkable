@@ -1,6 +1,6 @@
-﻿capital = 230 #Yerevan, Armenia
+﻿capital = 264
 
-oob = "AZR_1936"
+#oob = "AZR_1936"
 
 set_research_slots = 3
 

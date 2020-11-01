@@ -40,6 +40,20 @@ state={
 		}
 
 	}
+	
+		1945.4.1.1 = {		
+			buildings = {
+				industrial_complex = 4
+				infrastructure = 8
+				air_base = 2
+				arms_factory = 2
+			}
+			FRA = {
+				set_province_controller = 13935
+				set_province_controller = 6113
+				set_province_controller = 10756
+			} 			
+		}
 
 	provinces={
 		255 272 6113 10756 11011 13935 13937 13977 14018 14042 14088 

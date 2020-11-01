@@ -2,7 +2,7 @@ bookmarks = {
 	bookmark = {
 		name = "GATHERING_STORM_NAME"
 		desc = "GATHERING_STORM_DESC"
-		date = 1936.1.1.12
+		date = 1945.1.12
 		picture = "GFX_select_date_1936"
 		default_country = "GER"
 		default = yes
@@ -16,11 +16,12 @@ bookmarks = {
 				FRA_protected_by_the_maginot_line
 			}
 			focuses = {
-				FRA_little_entente
-				FRA_go_with_britain
+				FRA_initiate_government_reform
+				FRA_support_status_quo
 				FRA_revise_versailles
 			}
 		}
+
 		"ENG"={
 			history = "ENG_GATHERING_STORM_DESC"
 			ideology = democratic
@@ -49,8 +50,8 @@ bookmarks = {
 				GER_ussr_war_goal
 			}
 		}
-		"ITA"={
-			history = "ITA_GATHERING_STORM_DESC"
+		"SPR"={
+			history = "SPR_GATHERING_STORM_DESC"
 			ideology = fascism
 			ideas = {
 				vittoria_mutilata
@@ -62,6 +63,7 @@ bookmarks = {
 				ITA_italy_first
 			}		
 		}
+		
 		"SOV"={
 			history = "SOV_GATHERING_STORM_DESC"
 			ideology = communism
@@ -75,48 +77,24 @@ bookmarks = {
 				SOV_war_with_uk
 			}	
 		}
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+
+
+		# minors from DLC ####
 		"POL"={
+			minor = yes
 			history = "POL_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
+				
 			}
 			focuses = {
 				POL_the_baltic_alliance
 				POL_draw_closer_to_britain
 				POL_seek_accommodation_with_germany
-			}
-		}
-		
-		"ROM"={
-			history = "ROM_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				ROM_king_carol_ii_hedonist
-				neutrality_idea
-			}
-			focuses = {
-				ROM_balkans_dominance
-				ROM_institute_royal_dictatorship
-				ROM_preserve_greater_romania
-			}
-		}
-		
-		"---"={
-			history = "OTHER_GATHERING_STORM_DESC"
-		}
-		
-		"CZE"={
-			minor = yes
-			history = "CZE_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				CZE_skoda_works
-				CZE_divided_nation
-			}
-			focuses = {
-				CZE_sudeten_1
-				CZE_industrial_legacy
-				CZE_military_research_institute
 			}
 		}
 
@@ -131,6 +109,21 @@ bookmarks = {
 				HUN_proclaim_the_restoration_of_austria_hungary
 				HUN_secret_rearmament
 				HUN_renounce_the_treaty_of_trianon
+			}
+		}
+
+		"ROM"={
+			minor = yes
+			history = "ROM_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				ROM_king_carol_ii_hedonist
+				neutrality_idea
+			}
+			focuses = {
+				ROM_balkans_dominance
+				ROM_institute_royal_dictatorship
+				ROM_preserve_greater_romania
 			}
 		}
 		
@@ -148,27 +141,26 @@ bookmarks = {
 				YUG_abolish_the_monarchy
 				YUG_establish_the_banovina_of_croatia
 			}
-		}
-
-		"FIN"={
+		}		
+		
+		"HOL"={
 			minor = yes
-			history = "FIN_GATHERING_STORM_DESC"
-			ideology = neutrality
+			history = "NETHERLANDS_GATHERING_STORM_DESC"
+			ideology = democratic
 			ideas = {
-				nationalised_finnish_industries
-				fin_winter_war
-				fin_civilian_goals
+				HOL_wilhelmina
+				HOL_shell_shocked_spectator_5
+				HOL_de_crisisjaren_5
 			}
 			focuses = {
-				FIN_elect_kyosti
-				FIN_march_against_government
-				FIN_defense_committee
+				HOL_continue_the_war_in_batavia
+				HOL_liberation
+				HOL_prepare_the_inundation_lines
 			}
 		}
-
 		
 		effect = {
-			randomize_weather = 12345 # <- Obligatory in every bookmark !
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }
 		}
 	}

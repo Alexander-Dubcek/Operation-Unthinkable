@@ -1,0 +1,79 @@
+#background sprite is in frontendmainviewbg.gfx
+
+spriteTypes = {
+	textSpriteType = {
+		name = "GFX_main_lobby_button"
+		textureFile = "gfx/interface/main_lobby_button.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+		
+	spriteType = {
+		name = "GFX_frontend_game_logo"
+		texturefile = "gfx/interface/logo_game.dds"
+	}
+
+	spriteType = {
+		name = "GFX_frontend_dev_logo"
+		texturefile = "gfx/interface/pdx_dev_logo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_alpha_stamp"
+		texturefile = "gfx/interface/alpha_stamp.dds"
+	}
+
+	spriteType = {
+		name = "GFX_socialview_icon"
+		texturefile = "gfx/interface/icons/pi_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_frontend_game_Singleplayer"
+		texturefile = "gfx/interface/menu_buttons/Singleplayer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_frontend_Multiplayer"
+		texturefile = "gfx/interface/menu_buttons/Multiplayer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_frontend_Options"
+		texturefile = "gfx/interface/menu_buttons/Options.dds"
+	}
+
+	spriteType = {
+		name = "GFX_frontend_Credits"
+		texturefile = "gfx/interface/menu_buttons/Credits.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_frontend_Quit"
+		texturefile = "gfx/interface/menu_buttons/Quit.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_frontend_Newgame"
+		texturefile = "gfx/interface/menu_buttons/New Game.dds"
+	}
+
+	spriteType = {
+		name = "GFX_frontend_Continue"
+		texturefile = "gfx/interface/menu_buttons/Continue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_frontend_Load"
+		texturefile = "gfx/interface/menu_buttons/Load.dds"
+	}
+
+	spriteType = {
+		name = "GFX_frontend_Back"
+		texturefile = "gfx/interface/menu_buttons/Back.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_frontend_Tutorial"
+		texturefile = "gfx/interface/menu_buttons/Tutorial.dds"
+	}
+}

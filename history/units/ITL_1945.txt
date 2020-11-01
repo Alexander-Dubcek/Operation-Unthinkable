@@ -1,0 +1,377 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Divisione di Fanteria"
+	
+	# Represents regular all infantry divisions
+	# In later years, CCNN Brigade added to Inf Division (1x2 militia/inf regiment)
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 
+		artillery = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Divisione Alpina"				# Divisione Alpina (high experience, best equipment)
+
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }		# Elite Alpina Regiments
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Divisione Motorizzata"			# Divisione Motorizzata, first raised in 1939
+
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }		# 3rd Rgt = (elite) Bersaglieri
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Divisione Corazzata" 			# Divisione Corazzata
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 3 }
+		motorized = { x = 1 y = 0 }		# Bersaglieri (elite regiment, highest experience and best equipment)
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 
+	}
+	priority = 2
+}
+
+##### OOB #####
+units = {
+	division = {
+		name = "7a Divisione di Fanteria"
+		location = 6946
+		division_template = "Divisione di Fanteria" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "22a Divisione di Fanteria"
+		location = 9907
+		division_template = "Divisione di Fanteria" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "23a Divisione di Fanteria"
+		location = 967
+		division_template = "Divisione di Fanteria" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "37a Divisione di Fanteria"
+		location = 11889
+		division_template = "Divisione di Fanteria" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "15a Divisione di Fanteria"
+		location = 925
+		division_template = "Divisione di Fanteria" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "67a Divisione di Fanteria"
+		location = 11861
+		division_template = "Divisione di Fanteria" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "19a Divisione di Fanteria"
+		location = 9907
+		division_template = "Divisione di Fanteria" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "10a Divisione Corazzata"
+		location = 11833
+		division_template = "Divisione Corazzata" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "42a Divisione Corazzata"
+		location = 9879
+		division_template = "Divisione Corazzata" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "6a Divisione Corazzata"
+		location = 9907
+		division_template = "Divisione Corazzata" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "32a Divisione Alpina"
+		location = 967
+		division_template = "Divisione Alpina" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "3a Divisione Alpina"
+		location = 9904
+		division_template = "Divisione Alpina" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "4a Divisione Alpina"
+		location = 9904
+		division_template = "Divisione Alpina" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "71a Divisione di Fanteria"
+		location = 9904
+		division_template = "Divisione di Fanteria" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "53a Divisione di Fanteria"
+		location = 10074
+		division_template = "Divisione di Fanteria" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "44a Divisione di Fanteria"
+		location = 10074
+		division_template = "Divisione di Fanteria" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "43a Divisione di Fanteria"
+		location = 9750
+		division_template = "Divisione di Fanteria" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "27a Divisione di Fanteria"
+		location = 6946
+		division_template = "Divisione di Fanteria" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "11a Divisione di Fanteria"
+		location = 9907
+		division_template = "Divisione di Fanteria" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "75a Divisione di Fanteria"
+		location = 9879
+		division_template = "Divisione di Fanteria" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "46a Divisione di Fanteria"
+		location = 6946
+		division_template = "Divisione di Fanteria" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "47a Divisione di Fanteria"
+		location = 967
+		division_template = "Divisione di Fanteria" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "11a Divisione di Fanteria"
+		location = 11861
+		division_template = "Divisione di Fanteria" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "12a Divisione di Fanteria"
+		location = 9879
+		division_template = "Divisione di Fanteria" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "4a Divisione di Fanteria"
+		location = 11889
+		division_template = "Divisione di Fanteria" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "34a Divisione di Fanteria"
+		location = 9907
+		division_template = "Divisione di Fanteria" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+}
+
+
+### Air Wings ###
+air_wings = {
+	2 = { 															
+		### 1a Squadra Aerea (CO: Fougier) ###
+		fighter_equipment_0 = { owner = "ITA" amount = 84 }					
+		tac_bomber_equipment_1 =  { owner = "ITA" amount = 123 }			
+						# 6a Divisione Aerea 'Falco' -- BR.20
+	}
+	2 = {		
+		### 3a Squadra Aerea (CO: Pelligrini) ###
+		fighter_equipment_1 = { owner = "ITA" amount = 96 }				
+		tac_bomber_equipment_1 =  { owner = "ITA" amount = 88 }		
+	}
+}
+
+
+	
+	#########################
+	## STARTING PRODUCTION ##
+	#########################
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "ITA"
+		}
+		requested_factories = 10
+		progress = 0.1
+		efficiency = 100
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "ITA" 
+		}
+		requested_factories = 4
+		progress = 0.3
+		efficiency = 100
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = light_tank_equipment_2
+			creator = "ITA" 
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 100
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "ITA" 
+		}
+		requested_factories = 2
+		progress = 0.4
+		efficiency = 100
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_2
+			creator = "ITA" 
+		}
+		requested_factories = 2
+		progress = 0.2
+		efficiency = 100
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = CAS_equipment_1
+			creator = "ITA" 
+		}
+		requested_factories = 2
+		progress = 0.2
+		efficiency = 100
+	}
+}
+	#####################

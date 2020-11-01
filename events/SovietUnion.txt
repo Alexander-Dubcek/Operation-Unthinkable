@@ -1,0 +1,248 @@
+﻿###########################
+# Soviet Events
+###########################
+
+add_namespace = soviet
+
+# Hitler's body Found
+country_event = {
+    id = soviet.1
+    title = soviet.1.t
+    desc = soviet.1.d
+	picture = GFX_report_event_001
+
+    fire_only_once = yes
+    is_triggered_only = no
+	trigger = {
+		tag = SOV
+		64 = { is_controlled_by = SOV }
+		64 = { is_owned_by = GER }
+		SOV = { has_war_with = GER }
+	}
+    
+    option = { 
+        name = soviet.1.a
+
+    }
+}
+
+# Berlin is Captured
+country_event = {
+    id = soviet.2
+    title = soviet.2.t
+    desc = soviet.2.d
+	picture = GFX_report_event_001
+
+    fire_only_once = yes
+    is_triggered_only = no
+	trigger = {
+		tag = SOV
+		64 = { is_controlled_by = SOV }
+		64 = { is_owned_by = GER }
+		SOV = { has_war_with = GER }
+	}
+    
+    option = { 
+        name = soviet.2.a
+		set_country_flag = Berlin_Falls
+    }
+}
+
+# Reichstag falls
+country_event = {
+    id = soviet.3
+    title = soviet.3.t
+    desc = soviet.3.d
+	picture = GFX_report_event_001
+
+    fire_only_once = yes
+    is_triggered_only = no
+	trigger = {
+		has_country_flag = Berlin_Falls
+		tag = SOV
+		64 = { is_controlled_by = SOV }
+		64 = { is_owned_by = GER }
+		SOV = { has_war_with = GER }
+	}
+	
+    option = { 
+        name = soviet.3.a
+		GER = {
+			white_peace	= USA
+			white_peace	= SOV
+			white_peace	= BUL
+			white_peace	= GRE
+			white_peace	= ROM
+			white_peace	= YUG
+			white_peace	= ENG
+			white_peace	= FRA
+			white_peace	= ITL
+		}
+		SOV = {
+			white_peace	= HUN
+		}
+		POL = {
+			white_peace	= HUN
+		}
+		DDR = {
+			white_peace	= HUN
+		}
+		HOL = {
+			set_politics = {	
+				ruling_party = christian_democracy
+				last_election = "1944.6.18"
+				election_frequency = 48
+				elections_allowed = yes
+				}
+			set_popularities = {
+				christian_democracy = 43
+				social_democrat = 36
+				democratic = 21
+			}
+			white_peace	= HUN
+		}
+		USA = { transfer_state = 4 }
+		ENG = { transfer_state = 152 }
+		FRA = { transfer_state = 153 }
+		BEL = { transfer_state = 34 }
+		BEL = { transfer_state = 6 }
+		ITL = { transfer_state = 39 }
+		YUG = { transfer_state = 104 }
+		YUG = { transfer_state = 109 }
+		YUG = { transfer_state = 103 }
+		YUG = { transfer_state = 102 }
+		YUG = { transfer_state = 163 }
+		YUG = { transfer_state = 736 }
+		ENG = { transfer_state = 51 }
+		FRA = { transfer_state = 42 }
+		USA = { transfer_state = 55 }
+		ENG = { transfer_state = 57 }
+		ENG = { transfer_state = 56 }
+		USA = { transfer_state = 54 }
+		FRA = { transfer_state = 50 }
+		USA = { transfer_state = 53 }
+		USA = { transfer_state = 52 }
+		ENG = { transfer_state = 59 }
+		ENG = { transfer_state = 58 }
+		DDR = { transfer_state = 60 }
+		DDR = { transfer_state = 65 }
+		DDR = { transfer_state = 64 }
+		DDR = { transfer_state = 62 }
+		DDR = { transfer_state = 61 }	
+		CZE = { transfer_state = 69 }
+		CZE = { transfer_state = 9 }
+		CZE = { transfer_state = 75 }
+		CZE = { transfer_state = 74 }
+		CZE = { transfer_state = 72 }
+		CZE = { transfer_state = 70 }
+		CZE = { transfer_state = 71 }
+		CZE = { transfer_state = 664 }
+		HUN = { transfer_state = 155 }
+		HUN = { transfer_state = 154 }
+		HUN = { transfer_state = 43 }
+		POL = { transfer_state = 63 }
+		POL = { transfer_state = 86 }
+		POL = { transfer_state = 68 }
+		POL = { transfer_state = 66 }
+		POL = { transfer_state = 67 }
+		POL = { transfer_state = 762 }
+		POL = { transfer_state = 88 }
+		POL = { transfer_state = 92 }
+		POL = { transfer_state = 90 }
+		POL = { transfer_state = 10 }
+		POL = { transfer_state = 97 }
+		POL = { transfer_state = 98 }
+		POL = { transfer_state = 85 }
+		POL = { transfer_state = 87 }
+		POL = { transfer_state = 5 }
+		SOV = { transfer_state = 763 }
+		SOV = { transfer_state = 188 }
+		LUX = { transfer_state = 8 }
+		ITL = {
+			annex_country = {
+				target = ITA 
+			}
+		}
+		HUN = {
+			dismantle_faction = yes
+			set_politics= {
+				ruling_party = neutrality 
+				elections_allowed = no 
+			}
+			add_popularity= { 
+				ideology = neutrality 
+				popularity = 0.8
+			}
+			add_popularity= { 
+				ideology = fascism 
+				popularity = -0.7 
+			}
+			add_popularity= { 
+				ideology = democratic 
+				popularity = -0.27 
+			}
+			add_popularity= { 
+				ideology = communism 
+				popularity = 0.2
+			}
+		}
+		POL = {
+			set_politics= {
+				ruling_party = communism 
+				elections_allowed = no 
+			}
+			add_popularity= { 
+				ideology = neutrality 
+				popularity = -0.7 
+			}
+			add_popularity= { 
+				ideology = neutrality 
+				popularity = 0.08
+			}
+			add_popularity= { 
+				ideology = communism 
+				popularity = 0.7 
+			}
+			add_popularity= { 
+				ideology = democratic 
+				popularity = -0.27 
+			}
+		}
+		CZE = {
+			set_politics= {
+				ruling_party = social_democrat 
+				elections_allowed = no 
+			}
+			add_popularity= { 
+				ideology = social_democrat 
+				popularity = 0.45 
+			}
+			add_popularity= { 
+				ideology = neutrality 
+				popularity = -0.20 
+			}
+			add_popularity= { 
+				ideology = fascism 
+				popularity = -0.05 
+			}
+			add_popularity= { 
+				ideology = communism 
+				popularity = 0.35
+			}
+			add_popularity= { 
+				ideology = democratic 
+				popularity = -0.65
+			}
+			add_popularity= { 
+				ideology = democratic 
+				popularity = 0.20
+			}
+		}
+		SOV = {
+			puppet = DDR
+			puppet = BUL
+			puppet = POL
+			remove_from_faction = ROM
+		}
+    }
+}

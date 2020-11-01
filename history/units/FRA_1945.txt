@@ -1,0 +1,603 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Division d'Infanterie"		
+	division_names_group = FRA_INF_01
+	# Represents: Division d'Infanterie (Series A and B), Div. d'Inf. de Forteresse
+	# Difference is their equipment
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 3 }
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+		artillery_brigade = { x = 3 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 	
+		anti_tank = { x = 0 y = 1 } 	
+		signal_company = { x = 0 y = 2 } 	
+	}
+}
+
+division_template = {
+	name = "Division d'Infanterie Motorisée"	# Division d'Infanterie Motorisée
+	division_names_group = FRA_MOT_01
+	# Note: All motorized are frontline (highest experience, latest equip) 
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Recon Group consisted of 26 ACs + motorcycles
+		artillery = { x = 0 y = 1 }  # Heavy Arty Regiment had 1x 155mm, 1x 105mm battalions
+	}
+}
+division_template = {
+	name = "Division Légère Mécanique" 
+	division_names_group = FRA_MEC_01
+
+	regiments = {
+		medium_armor = { x = 0 y = 0 }		
+		light_armor = { x = 0 y = 1 }		
+		medium_armor = { x = 1 y = 0 }		
+		light_armor = { x = 1 y = 1 }		
+		motorized = { x = 2 y = 0 }			
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }    
+		artillery = { x = 0 y = 1 } 	
+		signal_company = { x = 0 y = 2 } 
+	}
+}
+division_template = {
+	name = "Brigade Cuirassée" 		
+	# Usual tanks: B1, B1bis
+	division_names_group = FRA_ARM_02
+	regiments = {
+		heavy_armor = { x = 0 y = 0 }
+		heavy_armor = { x = 0 y = 1 }
+		heavy_armor = { x = 1 y = 0 }
+		heavy_armor = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		mot_artillery_brigade = { x = 3 y = 0 }
+		mot_artillery_brigade = { x = 3 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 	
+		anti_tank = { x = 0 y = 1 } 	
+		signal_company = { x = 0 y = 2 } 
+		artillery = { x = 0 y = 3 } 
+	}
+}
+
+
+##### OOB #####
+units = {
+	division= {	
+		name = "13ème Division d'Infanterie"	
+		location = 7376
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "5ème Division Légère Mécanique"	
+		location = 6496
+		division_template = "Division Légère Mécanique"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "8ème Division Légère Mécanique"	
+		location = 3397
+		division_template = "Division Légère Mécanique"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "4ème Division Légère Mécanique"	
+		location = 3524
+		division_template = "Division Légère Mécanique"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "11ème Division d'Infanterie"	
+		location = 9482
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "33ème Division d'Infanterie"	
+		location = 589
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "24ème Division d'Infanterie"	
+		location = 6568
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "29ème Division d'Infanterie"	
+		location = 6488
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "222ème Division d'Infanterie"	
+		location = 3530
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "58ème Division d'Infanterie"	
+		location = 6542
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "64ème Division d'Infanterie"	
+		location = 11640
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "63ème Division d'Infanterie"	
+		location = 7376
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "13ème Division d'Infanterie"	
+		location = 9503
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "3ème Division d'Infanterie"	
+		location = 6529
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "19ème Division d'Infanterie"	
+		location = 6469
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "44ème Division d'Infanterie"	
+		location = 3530
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "62ème Division d'Infanterie"	
+		location = 678
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "92ème Division d'Infanterie"	
+		location = 3397
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "67ème Division d'Infanterie"	
+		location = 11431
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "81ème Division d'Infanterie"	
+		location = 11431
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "47ème Division d'Infanterie"	
+		location = 11431
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "42ème Division d'Infanterie"	
+		location = 11533
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "21ème Division d'Infanterie"	
+		location = 11533
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "20ème Division d'Infanterie"	
+		location = 3524
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "17ème Division d'Infanterie"	
+		location = 9547
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "84ème Division d'Infanterie"	
+		location = 9482
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "65ème Division d'Infanterie"	
+		location = 9482
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "45ème Division d'Infanterie"	
+		location = 6469
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "64ème Division d'Infanterie"	
+		location = 3512
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "12ème Division d'Infanterie"	
+		location = 6622
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "34ème Division d'Infanterie"	
+		location = 6622
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "1ème Brigade Cuirassée"	
+		location = 6568
+		division_template = "Brigade Cuirassée"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "2ème Brigade Cuirassée"	
+		location = 3524
+		division_template = "Brigade Cuirassée"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "3ème Division d'Infanterie"	
+		location = 9431
+		division_template = "Brigade Cuirassée"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "5ème Division d'Infanterie Motorisée"	
+		location = 6529
+		division_template = "Division d'Infanterie Motorisée"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "35ème Division d'Infanterie Motorisée"	
+		location = 9547
+		division_template = "Division d'Infanterie Motorisée"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "6ème Division d'Infanterie Motorisée"	
+		location = 589
+		division_template = "Division d'Infanterie Motorisée"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "1ème Division d'Infanterie Motorisée"	
+		location = 3444
+		division_template = "Division d'Infanterie Motorisée"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "10ème Division d'Infanterie Motorisée"	
+		location = 3262
+		division_template = "Division d'Infanterie Motorisée"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "68ème Division d'Infanterie"	
+		location = 9503
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "94ème Division d'Infanterie"	
+		location = 9909
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "54ème Division d'Infanterie"	
+		location = 3959
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "50ème Division d'Infanterie"	
+		location = 6975
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "72ème Division d'Infanterie"	
+		location = 3764
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "99ème Division d'Infanterie"	
+		location = 764
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "22ème Division d'Infanterie"	
+		location = 9745
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "11ème Division d'Infanterie"	
+		location = 778
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "13ème Division d'Infanterie"	
+		location = 9909
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "54ème Division d'Infanterie"	
+		location = 3959
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "17ème Division d'Infanterie"	
+		location = 6975
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "60ème Division d'Infanterie"	
+		location = 3764
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "74ème Division d'Infanterie"	
+		location = 9745
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "77ème Division d'Infanterie"	
+		location = 778
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+}
+	
+	
+### Air Wings
+air_wings = {
+	28 = { 													
+		fighter_equipment_2 = { owner = "FRA" amount = 259 }			
+		heavy_fighter_equipment_1  = { owner = "FRA"  amount = 36 }	# Groupement de Chasse de Nuit -- Potez 631
+		tac_bomber_equipment_2 =  { owner = "FRA" amount = 24 }		# Groupement de Bombardment 6 -- LeO 451
+		tac_bomber_equipment_1 =  { owner = "FRA" amount = 24 }		# Groupement de Bombardment 9 -- Amiot 143
+		CAS_equipment_1 =  { owner = "FRA" amount = 24 }			# Groupement de Bombardment d'Asault 18 -- Br.693
+	}
+
+	34 = {															
+		fighter_equipment_2 = { owner = "FRA" amount = 132 }
+		tac_bomber_equipment_1 =  { owner = "FRA" amount = 24 }		# Groupement de Bombardment 10 -- Amiot 143
+		strat_bomber_equipment_1 =  { owner = "FRA" amount = 12 }		# Groupement de Bombardment 15 -- Farman F.222
+	}
+
+	17 = {															
+		fighter_equipment_2 = { owner = "FRA" amount = 144 }			
+		tac_bomber_equipment_2 =  { owner = "FRA" amount = 27 }		# Groupement de Bombardment 7 -- LeO 451
+		tac_bomber_equipment_1 =  { owner = "FRA" amount = 52 }		# Groupement de Bombardment 11 -- MB.210
+		CAS_equipment_1 =  { owner = "FRA" amount = 24 }			# Groupement de Bombardment d'Asault 19 -- Br.693
+	}
+}
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "FRA"
+		}
+		requested_factories = 2
+		progress = 0.1
+		efficiency = 100
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "FRA" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 100
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "FRA" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 100
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = light_tank_equipment_2
+			creator = "FRA" 
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 100
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "FRA" 
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 100
+	}
+}
+###################

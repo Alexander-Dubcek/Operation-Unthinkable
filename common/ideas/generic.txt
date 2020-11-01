@@ -1,0 +1,125 @@
+ideas = {
+	country = {
+		over_extended_logistics = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = GFX_Dysfunctional_Government
+			
+			modifier = {
+				army_morale_factor = -0.15
+				attrition = 0.05
+				army_speed_factor = -0.05
+				supply_consumption_factor = 0.2
+			}
+		}
+		extended_logistics = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = GFX_Dysfunctional_Government
+			
+			modifier = {
+				army_morale_factor = -0.05
+				attrition = 0.03
+				army_speed_factor = -0.02
+				supply_consumption_factor = 0.1
+			}
+		}
+		
+		victor_of_ww2 = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = GFX_Dysfunctional_Government
+			
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+				surrender_limit = 0.4	
+			}
+		}
+		
+		victor_of_great_patriotic_war = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = GFX_Dysfunctional_Government
+			
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.25
+				mobilization_speed = -0.1
+				surrender_limit = 0.4					
+			}
+		}
+		
+		hyper_inflation = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = GFX_Dysfunctional_Government
+			
+			modifier = {
+				stability_weekly = -0.008
+				political_power_gain = -0.45
+				consumer_goods_factor = 0.55
+			}
+		}
+		
+		fucked_economy = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = GFX_Dysfunctional_Government
+			
+			modifier = {
+				stability_weekly = -0.008
+				political_power_gain = -0.45
+				consumer_goods_factor = 0.55
+				production_speed_buildings_factor = 0.35
+			}
+		}
+		
+		manhattan_project = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = GFX_Dysfunctional_Government
+			
+			modifier = {
+				research_bonus = {
+					nuclear = 0.25
+				}
+			}
+		}
+	}
+}

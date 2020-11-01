@@ -6,7 +6,7 @@ state={
 		steel=54.000
 	}
 
-	history={
+	history= {
 		owner = HOL
 		add_core_of = HOL
 		buildings = {
@@ -39,21 +39,27 @@ state={
 			255 1 
 		}
 
-	}
-	
-		1945.4.1.1 = {		
+			
 			buildings = {
 				industrial_complex = 4
 				infrastructure = 8
 				air_base = 2
 				arms_factory = 2
 			}
+	   1945.4.1 = {
 			FRA = {
 				set_province_controller = 13935
 				set_province_controller = 6113
 				set_province_controller = 10756
+				set_province_controller = 14088
+				set_province_controller = 272
+				set_province_controller = 14042
+				set_province_controller = 14018
+				set_province_controller = 13977
+				set_province_controller = 255
 			} 			
 		}
+	}
 
 	provinces={
 		255 272 6113 10756 11011 13935 13937 13977 14018 14042 14088 

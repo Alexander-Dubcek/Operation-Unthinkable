@@ -1,6 +1,6 @@
 ﻿capital = 98
 
-oob = "CZE_1936"
+oob = ""
 
 set_technology = {
 	infantry_weapons = 1

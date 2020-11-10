@@ -11,7 +11,8 @@ state={
 	}	
 	state_category = city
 	history={
-		owner = LAT
+		owner = SOV
+		add_core_of = SOV
 		add_core_of = LAT
 		buildings = {
 			infrastructure = 5

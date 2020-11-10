@@ -1235,3 +1235,15 @@ declare_war_on = {
 	target = HUN
 	type = annex_everything
 }
+	set_autonomy = {
+		target = POL
+		autonomous_state = autonomy_integrated_puppet
+	}
+	set_autonomy = {
+		target = ROM
+		autonomous_state = autonomy_integrated_puppet
+	}
+	set_autonomy = {
+		target = BUL
+		autonomous_state = autonomy_integrated_puppet
+	}

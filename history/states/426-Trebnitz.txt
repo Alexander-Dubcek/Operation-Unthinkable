@@ -6,7 +6,7 @@ state={
 	}
 	
 	history={
-		owner = GER
+		owner = SOV
 		add_core_of = GER
 		add_core_of = SIL
 		buildings = {

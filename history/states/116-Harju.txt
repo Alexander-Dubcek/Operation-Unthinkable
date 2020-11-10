@@ -14,7 +14,8 @@ state={
 	}
 	
 	history={
-		owner = EST
+		owner = SOV
+		add_core_of = SOV
 		add_core_of = EST
 		buildings = {
 			infrastructure = 5

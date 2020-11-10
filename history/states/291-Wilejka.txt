@@ -6,7 +6,7 @@ state={
 	history={
 		add_core_of = POL
 		add_core_of = BLR
-		owner = POL
+		owner = SOV
 		buildings = {
 			infrastructure = 4
 

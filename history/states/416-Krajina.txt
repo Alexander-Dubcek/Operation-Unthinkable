@@ -6,7 +6,7 @@ state={
 	}
 	
 	history={
-		owner = YUG
+		owner = CRO
 		add_core_of = YUG
 		add_core_of = BOS
 		add_core_of = SRP

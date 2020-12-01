@@ -15,6 +15,13 @@ state={
 			air_base = 3
 
 		}
+	   1945.4.1 = {
+			HUN = {
+				set_province_controller = 10854
+				set_province_controller = 3026
+				set_province_controller = 4912
+			} 			
+		}
 	}
 	
 	manpower=558980

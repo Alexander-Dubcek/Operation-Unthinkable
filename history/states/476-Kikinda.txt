@@ -5,7 +5,7 @@ state={
 		409 9180 9797 15221 20240 
 	}
 	history={
-		owner = YUG
+		owner = SOV
 		add_core_of = YUG
 		add_core_of = SER
 		add_core_of = BNT

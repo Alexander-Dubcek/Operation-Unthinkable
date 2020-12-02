@@ -10,6 +10,11 @@ GER = {
 	color_ui = rgb { 91 95 102 }
 }
 
+ITL = { 
+	color = rgb { 204 166 108 }
+	color_ui = rgb { 204 166 108 }
+}
+
 ENG = {
 	color = rgb { 201 56 93 }
 	color_ui = rgb { 255 73 121 }
